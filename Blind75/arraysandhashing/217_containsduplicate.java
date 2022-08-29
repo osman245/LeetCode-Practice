@@ -5,6 +5,8 @@ class Solution {
         loop through array.
         if hashset already contains val in array
         return true..
+
+        Time complexity: O(n)
         */
         HashSet<Integer> set = new HashSet();
 
