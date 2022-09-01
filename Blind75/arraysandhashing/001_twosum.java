@@ -6,22 +6,24 @@ class Solution {
         add key as val and value as index..
         if the map contains key that is (target-nums)
         return both indexes...
-
+         [
         Time complexity: O(n)
+          diff = target- nums[i];
+          diff + nums[i] = target....
         */
         HashMap<Integer,Integer> map = new HashMap<>();
 
         for(int i = 0; i < nums.length;i++) {
-
-            if(map.containsKey(target-nums[i])) {
-                return new int[] {i,map.get(target-nums[i])};
+            int diff = target-nums[i];
+            if(map.containsKey(diff)) {
+                return new int[] {i,map.get(diff)};
 
             }else {
                 map.put(nums[i],i);
             }
         }
 
-        throw new IllegalArgumentException("no match found");
+        throw new IllegalArgumentException("no two sums that equal target..");
 
 
 
